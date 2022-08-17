@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+body
+{
+background-image:url("no 434.jpg");
+}
+h1
+{
+color:yellow;
+}
+</style>
+</head>
+<body>
+<script language="javascript"> 
+function validate() 
+{ 
+var flag=1;
+if(document.myform.Select a Theater.value=="")
+{ 
+alert("Select any one")
+flag=0; 
+} 
+if(flag==1) 
+{  
+window.self.location.href="Available seats.html","right"; 
+} 
+else 
+{ 
+alert("INVALID INPUT"); 
+} 
+} 
+</script>
+<form name="myform">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<table>
+<tr><td><h1><b>Available theaters:</b></h1></td>
+  <td><select name="Available theaters">
+  <option selected="" value="Default">-Select a Theater-</option>
+  <option>Galaxy
+  <option>Ascar
+  <option>Sathayam
+  <option>Devi
+  <option>Vishnu
+  <option>Apsara
+  <option>Alangar
+  <option>Ragavendra
+</select></td></tr>
+</table>
+<input type="button" value="Submit" onClick="validate()">
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<input type="reset" value="Clear"> 
+</form>
+</body>
+</html>

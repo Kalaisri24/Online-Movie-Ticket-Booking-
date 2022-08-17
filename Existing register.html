@@ -1,0 +1,52 @@
+<html> 
+<body>
+<script language="javascript"> 
+function validate() 
+{ 
+var flag=1; 
+if(document.myform.Username.value==""|| document.myform.Password.value=="") 
+{ 
+alert("Username and Password must be filled");
+flag=0; 
+} 
+if(flag==1) 
+{  
+window.open("Available theaters.html","right"); 
+} 
+else 
+{ 
+alert("INVALID INPUT"); 
+} 
+} 
+</script>
+<form name="myform">
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 style="color:red;text-align:center;margin-left:30px;">Customer Account</h1>
+<center>
+<body background="banner.jpg" height="1000" width="1000"> 
+<form name="formvalidation" onSubmit="return Customer Account();">
+<table border="0">
+<center>
+<tr>
+<td><h2 style="color:blue;text-align:center;margin-left:30px">Username:</h2></td>
+<td><input name="Username" type="text" size="20"></td>
+</tr>
+<tr>
+<td><h3 style="color:blue;text-align:center;margin-left:30px">Password:</h3></td>
+<td><input name="Password" type="password" size="20"></td>
+</tr>
+</center>
+</table>
+<input type="button" value="Submit" onClick="validate()">
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<input type="reset" value="Clear" >
+</form>
+</body>
+</html>

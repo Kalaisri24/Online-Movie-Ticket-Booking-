@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+body
+{
+background-color:pink;
+}
+h1
+{
+color:red;
+margin-left:30px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<script language="javascript"> 
+function validate() 
+{ 
+var flag=1; 
+if(document.myform.Persons.value==""|| document.myform.Location.value=="") 
+{ 
+alert("Fill the details")
+flag=0; 
+} 
+if(flag==1) 
+{  
+window.self.location.href="About.html","right"; 
+} 
+else 
+{ 
+alert("INVALID INPUT"); 
+} 
+} 
+</script>
+<body>
+<form name="myform"> 
+<center>
+<h1><b>Online Reservation Movie Ticket</b></h1>
+<table>
+<tr><td><b>Movies:</b></td>
+<tr><td> </td><td><input type="radio" name="Movies" value="Dharmadurai">Dharmadurai</td></tr>
+<tr><td> </td><td><input type="radio" name="Movies" value="Kabali">Kabali</td></tr>
+<tr><td> </td><td><input type="radio" name="Movies" value="Remo">Remo</td></tr>
+<tr><td> </td><td><input type="radio" name="Movies" value="Thodari">Thodari</td></tr>
+<tr><td> </td><td><input type="radio" name="Movies" value="Theri">Theri</td></tr></tr>
+<tr><td><b>Date:</b></td>
+  <td><Select name="Date">
+  <option selected="" value="Default">-Select a date-</option>
+  <option>8 Mon
+  <option>9 Tue
+  <option>10 Wed
+  <option>11 Thur
+  <option>12 Fri
+  <option>13 Sat
+  <option>14Sun </td></tr>
+<td><b>Timing:</b></td>
+  <td><select name="Timing">
+  <option selected="" value="Default">-Select a timing-</option>
+  <option>10.00am to 12.30pm
+  <option>2.00pm to 4.30pm
+  <option>6.00pm to 9.30pm
+  <option>10.00pm to 12.00am</td></tr>
+<tr><td><b>No.of Persons:</b></td><td><input type="Number" name="Persons" "min"=10 "max"=50></td></tr>
+<tr><td><b>Location:</b></td><td><input name="Location" type="text" size="20"</td></tr>
+<tr><td><b>Facilities:</b></td></tr>
+<tr><td> </td><td><input name="Facilities" type="radio" value="AC">AC</td></tr>
+<tr><td> </td><td><input name="Facilities" type="radio" value="NON-AC">NON-AC</td></tr>
+</table>
+<input type="button" value="Submit" onClick="validate()">
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<input type="reset" value="Clear" >
+</form> 
+</body>
+</html>

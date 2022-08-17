@@ -1,0 +1,92 @@
+<html>  
+<body>
+<script language="javascript"> 
+function validate() 
+{ 
+var flag=1; 
+if(document.myform.Username.value==""||
+document.myform.Password.value==""||
+document.myform.Userid.value==""||
+document.myform.Address.value==""||
+document.myform.Zipcode.value==""||
+document.myform.City.value==""||
+document.myform.State.value==""||
+document.myform.Email.value==""||
+document.myform.Phonenumber.value=="") 
+{ 
+flag=0; 
+alert("Enter the Detail");
+}
+var str=document.myform.Phonenumber.value; 
+var x=new RegExp("^[0-9]+$"); 
+if(!(str.match(x))) 
+{ 
+if(!(str.length==10))
+flag=0;
+alert("Enter the Phone number"); 
+} 
+var str1=document.myform.Password.value; 
+var x1=new RegExp("^[0-9]+$");
+if(!(str.match(x1))) 
+{ 
+flag=0; 
+alert("Enter the Password");
+}  
+if(flag==1) 
+{
+window.self.location.href="Existing register.html"; 
+} 
+else 
+{
+alert("INVALID INPUT"); 
+document.myform.focus(); 
+} 
+} 
+</script>  
+<form name="myform">
+<h1 style="color:red;text-align:center;margin-left:30px;">Create Account</h1>
+<center>
+<body background="beach.jpg">  
+<table border="0">
+<tr><td>Username:</td> 
+<td><input name="Username" type="text" size="20"></td></tr>
+<tr><td>Password:</td> 
+<td><input name="Password" type="password" size="20"></td></tr>
+<tr><td>Userid:</td>
+<td><input name="Userid" type="text" size="10"></td></tr>
+<tr><td>Address:</td>
+<td><input name="Address" type="text" size="30"></td></tr>
+<tr><td>Zip Code:</td>
+<td><input name="Zipcode" type="text" size="10"></td></tr>
+<tr><td>City:</td>
+<td><input name="City" type="text" size="10"></td></tr>
+<tr><td>State:</td>
+<td><input name="State" type="text" size="20"></td></tr>
+<tr><td>Country:</td>
+<td><select name="Country">
+<option selected="" value="default">-select a country-</option>
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select></td></tr>
+<tr><td>Email:</td>
+<td><input type="Email" name="Email" size="30"></td></tr>
+<tr><td>Sex:</td>
+<td><input type="radio" name="sex"  value="male" >male<input type="radio"  name="sex"  value="female">female</td></tr>
+<tr><td>Phone Number:</td><td><input name="Phonenumber" type="text" size="15"></td></tr>
+</table>
+<br>
+<br>
+<input type="button" value="Submit" onClick="validate()">
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<input type="reset" value="Clear">
+</form>
+</body>
+</html>
+
+
